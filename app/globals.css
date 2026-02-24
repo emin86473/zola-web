@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 49% 24%; /* #1f325b (Navy Base) */
+    --foreground: 210 40% 98%;
+    
+    /* Branding Colors */
+    --primary: 222 49% 24%;
+    --secondary: 42 39% 63%; /* #c6a87c (Gold Accent) */
+    --accent: 224 71% 4%; /* #0f172a (Dark Slate for Contrast) */
+    --muted: 217 19% 27%;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+body {
+  background: radial-gradient(circle at top center, hsl(var(--background)), hsl(var(--accent)));
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+}
